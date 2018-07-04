@@ -36,7 +36,7 @@ public class Flick {
 		params.put("client_id", "le37iwi3qctbduh39fvnpevt1m2uuvz");
 		params.put("client_secret", "ignwy9ztnst3azswww66y9vd9zt6qnt");
 		params.put("username", "andrew.s@snooknet.com");
-		params.put("password", "Apples01");
+		params.put("password", Config.getFlickPassword());
 
 		JSONObject response = post("https://api.flick.energy/identity/oauth/token", params);
 		if (response != null) {
