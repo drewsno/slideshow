@@ -1,5 +1,8 @@
 package com.snooknet.slideshow;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,4 +40,12 @@ public class Config {
 		return 10;
 	}
 
+	public static String getFlickPassword() {
+		try {
+			return new String(Files.readAllBytes(Paths.get("C:\\Users\\Snook\\flickpw.txt")));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return "";
+		}
+	}
 }
